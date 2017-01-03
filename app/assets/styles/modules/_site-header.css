@@ -39,7 +39,7 @@
       transform: translateX(0);
 
       .site-header--dark & {
-        transform: scale(.56);
+        transform: scale(.55);
       }
     }
   }
@@ -71,8 +71,8 @@
     &__middle {
       position: absolute;
       top: 8px;
-      left: 0;
-      width: 20px;
+      right: 0;
+      width: 15px;
       height: 3px;
       background-color: #FFF;
       transition: all .3s ease-out;
@@ -83,8 +83,8 @@
       content: "";
       position: absolute;
       bottom: 0;
-      left: 0;
-      width: 20px;
+      right: 0;
+      width: 10px;
       height: 3px;
       background-color: #FFF;
       transform-origin: 0 100%;
@@ -104,10 +104,12 @@
     .site-header__menu-icon__middle {
       opacity: 0;
       transform: scaleX(0);
+      width: 20px;
     }
 
     &::after {
       transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+      width: 20px;
     }
   }
 

@@ -2,13 +2,15 @@
 
 /**
  * 1. Change the default font family in all browsers (opinionated).
- * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
 
 html {
   font-family: sans-serif; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.15; /* 2 */
+  -ms-text-size-adjust: 100%; /* 3 */
+  -webkit-text-size-adjust: 100%; /* 3 */
 }
 
 /**
@@ -256,6 +258,7 @@ hr {
 
 button,
 input,
+optgroup,
 select,
 textarea {
   font: inherit; /* 1 */
@@ -806,7 +809,6 @@ a {
 
   .flexbox .row--equal-height-at-medium {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
@@ -815,7 +817,6 @@ a {
 .flexbox .row--equal-height-at-medium > div {
   float: none;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -824,7 +825,6 @@ a {
 
   .flexbox .row--equal-height-at-large {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
@@ -833,7 +833,6 @@ a {
 .flexbox .row--equal-height-at-large > div {
   float: none;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -909,7 +908,7 @@ a {
 @media (min-width: 530px) {
 
   .feature-item {
-    padding-left: 94px;
+    padding-left: 194px;
   }
 }
 
@@ -945,8 +944,9 @@ a {
 
 .testimonial {
   background-color: rgba(255, 255, 255, .8);
-  padding: 0 18px 1px 18px;
+  padding: 0 30px 1px 30px;
   margin-bottom: 98px;
+
 }
 
 @media (min-width: 1010px) {
@@ -986,6 +986,10 @@ a {
   font-weight: 400;
   font-size: 0.9375rem;
   margin: .25rem 0 1rem 0;
+}
+
+.testimonial__text {
+  text-align: center;
 }
 
 /* Do not edit modules/_sprite directly as it is generated automatically by Gulp.
@@ -1150,8 +1154,8 @@ Instead edit gulp/templates/sprite */
   }
 
   .site-header--dark .site-header__logo {
-    -webkit-transform: scale(.56);
-            transform: scale(.56);
+    -webkit-transform: scale(.55);
+            transform: scale(.55);
   }
 }
 
@@ -1187,8 +1191,8 @@ Instead edit gulp/templates/sprite */
 .site-header__menu-icon__middle {
   position: absolute;
   top: 8px;
-  left: 0;
-  width: 20px;
+  right: 0;
+  width: 15px;
   height: 3px;
   background-color: #FFF;
   -webkit-transition: all .3s ease-out;
@@ -1201,8 +1205,8 @@ Instead edit gulp/templates/sprite */
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 20px;
+  right: 0;
+  width: 10px;
   height: 3px;
   background-color: #FFF;
   -webkit-transform-origin: 0 100%;
@@ -1229,11 +1233,13 @@ Instead edit gulp/templates/sprite */
   opacity: 0;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
+  width: 20px;
 }
 
 .site-header__menu-icon--close-x::after {
   -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
           transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+  width: 20px;
 }
 
 .site-header__menu-content {
@@ -1372,6 +1378,7 @@ Instead edit gulp/templates/sprite */
           transform: scale(1.2);
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
+  margin: 20px;
 }
 
 .modal--is-visible {
